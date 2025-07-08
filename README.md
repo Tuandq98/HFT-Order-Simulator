@@ -21,40 +21,58 @@ This is a simple backend microservice to simulate order creation and management 
 
 ```
 order-demo/
-├── src/main/java/com/equix/
-│   │  │              └── order_demo/
-│   │  │                  ├── OrderDemoApplication.java
-│   │  │                  ├── config/
-│   │  │                  │   ├── SecurityConfig.java
-│   │  │                  │   └── SwaggerConfig.java
-│   │  │                  ├── controller/
-│   │  │                  │   ├── OrderController.java
-│   │  │                  │   ├── advice/
-│   │  │                  │   │   └── GlobalExceptionHandler.java
-│   │  │                  │   └── dto/
-│   │  │                  │       └── req/
-│   │  │                  │           └── CreateOrderRequest.java
-│   │  │                  ├── exception/
-│   │  │                  │   ├── InvalidOrderStatusException.java
-│   │  │                  │   └── OrderNotFoundException.java
-│   │  │                  ├── model/
-│   │  │                  │   ├── Order.java
-│   │  │                  │   └── enums/
-│   │  │                  │       ├── OrderSide.java
-│   │  │                  │       └── OrderStatus.java
-│   │  │                  ├── repository/
-│   │  │                  │   ├── OrderRepository.java
-│   │  │                  │   └── impl/
-│   │  │                  │       └── InMemoryOrderRepository.java
-│   │  │                  └── service/
-│   │  │                      └── OrderService.java
-│   │  └── resources/
+order-demo/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── equix/
+│   │   │           └── order_demo/
+│   │   │               ├── OrderDemoApplication.java
+│   │   │
+│   │   │               ├── domain/
+│   │   │               │   ├── model/
+│   │   │               │   │   ├── Order.java
+│   │   │               │   │   └── enums/
+│   │   │               │   │       ├── OrderSide.java
+│   │   │               │   │       └── OrderStatus.java
+│   │   │               │   ├── repository/
+│   │   │               │   │   └── OrderRepository.java
+│   │   │               │   └── exception/
+│   │   │               │       ├── OrderNotFoundException.java
+│   │   │               │       └── InvalidOrderStatusException.java
+│   │   │
+│   │   │               ├── application/
+│   │   │               │   └── service/
+│   │   │               │       └── OrderService.java
+│   │   │
+│   │   │               ├── infrastructure/
+│   │   │               │   ├── repository/
+│   │   │               │   │   └── InMemoryOrderRepository.java
+│   │   │               │   └── config/
+│   │   │               │       ├── SecurityConfig.java
+│   │   │               │       └── SwaggerConfig.java
+│   │   │
+│   │   │               ├── web/
+│   │   │               │   ├── controller/
+│   │   │               │   │   ├── OrderController.java
+│   │   │               │   │   └── advice/
+│   │   │               │   │       └── GlobalExceptionHandler.java
+│   │   │               │   └── dto/
+│   │   │               │       └── req/
+│   │   │               │           └── CreateOrderRequest.java
+│   │   │
+│   │   └── resources/
 │   │       ├── application.properties
 │   │       ├── static/
 │   │       └── templates/
-│   └── test/java/com/equix/order_demo/
-│                           ├── OrderDemoApplicationTests.java
-│                           └── OrderServiceTest.java
+│   └── test/
+│       └── java/
+│           └── com/
+│               └── equix/
+│                   └── order_demo/
+│                       ├── OrderDemoApplicationTests.java
+│                       └── OrderServiceTest.java
 
 ```
 

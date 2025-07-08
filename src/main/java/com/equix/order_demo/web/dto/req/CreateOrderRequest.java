@@ -1,8 +1,9 @@
-package com.equix.order_demo.controller.dto.req;
+package com.equix.order_demo.web.dto.req;
 
 import java.math.BigDecimal;
 
-import com.equix.order_demo.model.enums.OrderSide;
+import com.equix.order_demo.domain.model.enums.OrderSide;
+
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

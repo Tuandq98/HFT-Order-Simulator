@@ -1,4 +1,4 @@
-package com.equix.order_demo.exception;
+package com.equix.order_demo.domain.exception;
 
 public class OrderNotFoundException extends RuntimeException {
     public OrderNotFoundException(Long id) {

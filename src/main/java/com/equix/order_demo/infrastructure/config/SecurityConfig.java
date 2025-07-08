@@ -1,4 +1,4 @@
-package com.equix.order_demo.config;
+package com.equix.order_demo.infrastructure.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

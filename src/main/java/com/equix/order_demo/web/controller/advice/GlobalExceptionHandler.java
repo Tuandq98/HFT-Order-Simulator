@@ -1,4 +1,4 @@
-package com.equix.order_demo.controller.advice;
+package com.equix.order_demo.web.controller.advice;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,8 +11,8 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import com.equix.order_demo.exception.InvalidOrderStatusException;
-import com.equix.order_demo.exception.OrderNotFoundException;
+import com.equix.order_demo.domain.exception.InvalidOrderStatusException;
+import com.equix.order_demo.domain.exception.OrderNotFoundException;
 
 import lombok.RequiredArgsConstructor;
 

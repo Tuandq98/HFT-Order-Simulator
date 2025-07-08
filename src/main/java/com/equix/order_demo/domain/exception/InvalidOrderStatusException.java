@@ -1,6 +1,6 @@
-package com.equix.order_demo.exception;
+package com.equix.order_demo.domain.exception;
 
-import com.equix.order_demo.model.enums.OrderStatus;
+import com.equix.order_demo.domain.model.enums.OrderStatus;
 
 public class InvalidOrderStatusException extends RuntimeException {
     public InvalidOrderStatusException(Long id, OrderStatus status) {

@@ -1,8 +1,9 @@
-package com.equix.order_demo.controller;
+package com.equix.order_demo.web.controller;
 
-import com.equix.order_demo.controller.dto.req.CreateOrderRequest;
-import com.equix.order_demo.model.Order;
-import com.equix.order_demo.service.OrderService;
+import com.equix.order_demo.application.service.OrderService;
+
+import com.equix.order_demo.domain.model.Order;
+import com.equix.order_demo.web.dto.req.CreateOrderRequest;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

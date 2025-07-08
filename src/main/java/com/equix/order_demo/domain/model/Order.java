@@ -1,10 +1,10 @@
-package com.equix.order_demo.model;
+package com.equix.order_demo.domain.model;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-import com.equix.order_demo.model.enums.OrderSide;
-import com.equix.order_demo.model.enums.OrderStatus;
+import com.equix.order_demo.domain.model.enums.OrderSide;
+import com.equix.order_demo.domain.model.enums.OrderStatus;
 
 import lombok.Builder;
 import lombok.Data;

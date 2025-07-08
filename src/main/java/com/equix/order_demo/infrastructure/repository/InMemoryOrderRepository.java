@@ -1,4 +1,4 @@
-package com.equix.order_demo.repository.impl;
+package com.equix.order_demo.infrastructure.repository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,8 +9,8 @@ import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.stereotype.Repository;
 
-import com.equix.order_demo.model.Order;
-import com.equix.order_demo.repository.OrderRepository;
+import com.equix.order_demo.domain.model.Order;
+import com.equix.order_demo.domain.repository.OrderRepository;
 
 @Repository
 public class InMemoryOrderRepository implements OrderRepository {

@@ -1,4 +1,4 @@
-package com.equix.order_demo.service;
+package com.equix.order_demo.application.service;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -7,12 +7,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import com.equix.order_demo.controller.dto.req.CreateOrderRequest;
-import com.equix.order_demo.exception.InvalidOrderStatusException;
-import com.equix.order_demo.exception.OrderNotFoundException;
-import com.equix.order_demo.model.Order;
-import com.equix.order_demo.model.enums.OrderStatus;
-import com.equix.order_demo.repository.OrderRepository;
+import com.equix.order_demo.domain.exception.InvalidOrderStatusException;
+import com.equix.order_demo.domain.exception.OrderNotFoundException;
+import com.equix.order_demo.domain.model.Order;
+import com.equix.order_demo.domain.model.enums.OrderStatus;
+import com.equix.order_demo.domain.repository.OrderRepository;
+import com.equix.order_demo.web.dto.req.CreateOrderRequest;
 
 import lombok.RequiredArgsConstructor;
 

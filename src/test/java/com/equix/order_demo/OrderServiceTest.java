@@ -13,14 +13,14 @@ import org.junit.jupiter.api.TestInstance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.equix.order_demo.controller.dto.req.CreateOrderRequest;
-import com.equix.order_demo.exception.InvalidOrderStatusException;
-import com.equix.order_demo.exception.OrderNotFoundException;
-import com.equix.order_demo.model.Order;
-import com.equix.order_demo.model.enums.OrderSide;
-import com.equix.order_demo.model.enums.OrderStatus;
-import com.equix.order_demo.repository.OrderRepository;
-import com.equix.order_demo.service.OrderService;
+import com.equix.order_demo.application.service.OrderService;
+import com.equix.order_demo.web.dto.req.CreateOrderRequest;
+import com.equix.order_demo.domain.exception.InvalidOrderStatusException;
+import com.equix.order_demo.domain.exception.OrderNotFoundException;
+import com.equix.order_demo.domain.model.Order;
+import com.equix.order_demo.domain.model.enums.OrderSide;
+import com.equix.order_demo.domain.model.enums.OrderStatus;
+import com.equix.order_demo.domain.repository.OrderRepository;
 
 @SpringBootTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
