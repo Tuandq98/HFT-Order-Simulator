@@ -6,6 +6,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.equix.order_demo.domain.exception.InvalidOrderStatusException;
 import com.equix.order_demo.domain.exception.OrderNotFoundException;
@@ -23,6 +24,7 @@ public class OrderService {
   private final OrderRepository orderRepository;
   private final Logger logger = LoggerFactory.getLogger(OrderService.class);
 
+  @Transactional
   public Order createOrder(CreateOrderRequest request) {
     Order order = Order.builder()
         .symbol(request.getSymbol())
@@ -37,6 +39,7 @@ public class OrderService {
     return saved;
   }
 
+  @Transactional
   public Order cancelOrder(Long id) {
     Order order = orderRepository.findById(id).orElseThrow(() -> new OrderNotFoundException(id));
     if (order.getStatus() != OrderStatus.PENDING)
@@ -47,6 +50,7 @@ public class OrderService {
     return updated;
   }
 
+  @Transactional
   public void simulateExecution() {
     List<Order> orders = orderRepository.findAll();
     for (Order order : orders) {
@@ -58,10 +62,12 @@ public class OrderService {
     }
   }
 
+  @Transactional(readOnly = true)
   public List<Order> getAllOrders() {
     return orderRepository.findAll();
   }
 
+  @Transactional(readOnly = true)
   public Order getOrderById(Long id) {
     return orderRepository.findById(id).orElseThrow(() -> new OrderNotFoundException(id));
   }
